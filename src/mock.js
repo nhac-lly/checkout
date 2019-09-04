@@ -1,4 +1,4 @@
-{
+const data = {
     "firstName": "Nhac",
     "lastName": "Ly",
     "email": "nhac.ly@hotmail.com",
@@ -10,13 +10,17 @@
             {
                 "name": "itemA",
                 "price": 100,
-                "shipfee": 5
+                "shipfee": 5,
+                "count": 2,
             },
             {
                 "name": "itemB",
                 "price": 99,
-                "shipfee": 10
+                "shipfee": 10,
+                "count": 3,
             }
         ]
     }
 }
+
+export default data;

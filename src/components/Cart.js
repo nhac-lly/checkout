@@ -11,7 +11,7 @@ const Cart = (tempData, loading, handleCountChange) => {
         tempData.orderDetail.item.map((i, index) => (
           <div key={index}>
             <Card style={{ width: '30rem', margin: '5% auto' }}>
-              <Card.Img variant="top" src={index === 0 ? picB : picA} />
+              <Card.Img variant="top" src={index === -1 ? picB : picA} />
               <Card.ImgOverlay>
                 <CounterInput
                   count={i.count}

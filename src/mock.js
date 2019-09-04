@@ -9,13 +9,13 @@ const data = {
         "item": [
             {
                 "name": "itemA",
-                "price": 100,
+                "price": 121,
                 "shipfee": 5,
                 "count": 2,
             },
             {
                 "name": "itemB",
-                "price": 99,
+                "price": 45,
                 "shipfee": 10,
                 "count": 3,
             }

@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Form, Button, Toast } from 'react-bootstrap';
 
-const Pricing = (tempData, loading) => {
+const Pricing = (item, loading) => {
     const [showToast, setShowToast] = useState(false);
+    const [data, setData] = useState([])
     const toggleShowToast = () => setShowToast(!showToast);
 
-    const { orderDetail } = tempData;
+    useEffect(() => {
+        setData(item)
+    }, [item]);
+
     let total = 0;
     let shipping = 0;
     if (!loading) {
-        orderDetail.item.forEach(i => {
+        data.forEach(i => {
             total += (i.price * i.count);
             shipping += i.shipfee;
         })

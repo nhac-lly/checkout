@@ -11,18 +11,21 @@ import data from './mock';
 
 const App = () => {
   const [tempData, setTempData] = useState({});
+  const [itemData, setItemData] = useState([])
   const [loading, setLoading] = useState(true);
-  console.log(tempData);
 
   useEffect(() => {
       setTempData(data);
+      setItemData(data.orderDetail.item)
       setLoading(false);
   }, []);
-  
+
   const handleCountChange = (count, index) => {
-    setTempData({...tempData}, tempData.orderDetail.item[index].count = count);
+    let nextItem = [...itemData];
+    nextItem[index].count = count;
+    setItemData(nextItem);
   };
-  
+
   return (
     <div className="App">
       <Header className="bg back"/>
@@ -32,7 +35,7 @@ const App = () => {
         </Col>
         <Col sm={12} md={6}>
           {Info(tempData, loading)}
-          {Pricing(tempData, loading)}
+          {Pricing(itemData, loading)}
         </Col>
       </Row>
     </div>

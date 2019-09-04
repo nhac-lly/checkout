@@ -40,7 +40,6 @@ const Pricing = () => {
                 </Card.Text>
                 <hr/>
                 <Card.Title>Payment Method</Card.Title>
-                <Card.Text>
                     <Form>
                         <Form.Check
                             type={radio}
@@ -54,7 +53,6 @@ const Pricing = () => {
                             label={'Cash on delivery'}
                         />
                     </Form>
-                </Card.Text>
                 <a href="#" > Check Details </a>
             </Card.Body>
         </Card>

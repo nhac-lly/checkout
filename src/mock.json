@@ -1,0 +1,22 @@
+{
+    "firstName": "Nhac",
+    "lastName": "Ly",
+    "email": "nhac.ly@hotmail.com",
+    "address": "on Space at 123 Street",
+    "phoneNumber": "84865699532",
+    "orderDetail": {
+        "orderNumber": "0666",
+        "item": [
+            {
+                "name": "itemA",
+                "price": 100,
+                "shipfee": 5
+            },
+            {
+                "name": "itemB",
+                "price": 99,
+                "shipfee": 10
+            }
+        ]
+    }
+}

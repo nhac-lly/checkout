@@ -11,42 +11,38 @@ import data from './mock';
 
 const App = () => {
   const [ tempData, setTempData ] = useState({});
-  const [ itemData, setItemData ] = useState([])
+  const [ item, setItem ] = useState([])
   const [ loading, setLoading ] = useState(true);
 
   useEffect(() => {
       setTempData(data);
-      setItemData(data.orderDetail.item)
+      setItem(data.orderDetail.item)
       setLoading(false);
   }, []);
 
   const handleCountChange = (count, index) => {
-    let nextItem = [...itemData];
+    let nextItem = [...item];
     nextItem[index].count = count;
-    setItemData(nextItem);
+    setItem(nextItem);
   };
 
   const { firstName, lastName, address, email, phoneNumber, orderDetail } = tempData;
 
   const cartProps = {
-    tempData : {
-      orderDetail,
-    },
+    orderDetail,
     handleCountChange,
   };
 
   const infoProps = {
-    tempData : {
       firstName,
       lastName, 
       address, 
       email, 
       phoneNumber
-    },
   };
 
   const pricingProps ={
-    item: itemData,
+    item,
   };
 
   return (

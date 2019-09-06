@@ -4,8 +4,7 @@ import picB from '../picA.jpg'
 import { Card } from 'react-bootstrap';
 import CounterInput from "react-counter-input";
 
-const Cart = ({ tempData, handleCountChange }) => {
-  const { orderDetail } = tempData;
+const Cart = ({ orderDetail, handleCountChange }) => {
   return (
     <div>
       {orderDetail.item.map((i, index) => (

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Col, Row } from 'react-bootstrap';
 
-const Info = ({ tempData }) => {
+const Info = ({ firstName, lastName, address, email, phoneNumber }) => {
     const [ onEdit, setOnEdit ] = useState(false);
-    const { firstName, lastName, address, email, phoneNumber } = tempData;
     const buttonStyle = {
         margin: '20px',
     };

@@ -5,9 +5,10 @@ import { Card } from 'react-bootstrap';
 import CounterInput from "react-counter-input";
 
 const Cart = ({ tempData, handleCountChange }) => {
+  const { orderDetail } = tempData;
   return (
     <div>
-      {tempData.orderDetail.item.map((i, index) => (
+      {orderDetail.item.map((i, index) => (
         <div key={index}>
           <Card style={{ width: '30rem', margin: '5% auto' }}>
             <Card.Img variant="top" src={index === -1 ? picB : picA} />

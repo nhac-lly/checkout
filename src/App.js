@@ -10,9 +10,9 @@ import data from './mock';
 // const data = JSON.stringify(jsonData)
 
 const App = () => {
-  const [tempData, setTempData] = useState({});
-  const [itemData, setItemData] = useState([])
-  const [loading, setLoading] = useState(true);
+  const [ tempData, setTempData ] = useState({});
+  const [ itemData, setItemData ] = useState([])
+  const [ loading, setLoading ] = useState(true);
 
   useEffect(() => {
       setTempData(data);
@@ -26,13 +26,23 @@ const App = () => {
     setItemData(nextItem);
   };
 
+  const { firstName, lastName, address, email, phoneNumber, orderDetail } = tempData;
+
   const cartProps = {
-    tempData,
-    handleCountChange
+    tempData : {
+      orderDetail,
+    },
+    handleCountChange,
   };
 
   const infoProps = {
-    tempData,
+    tempData : {
+      firstName,
+      lastName, 
+      address, 
+      email, 
+      phoneNumber
+    },
   };
 
   const pricingProps ={

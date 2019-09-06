@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Card, Form, Button, Toast } from 'react-bootstrap';
 
 const Pricing = ({ item }) => {
-    const [showToast, setShowToast] = useState(false);
-    const [data, setData] = useState([])
+    const [ showToast, setShowToast ] = useState(false);
+    const [ data, setData ] = useState([])
     const toggleShowToast = () => setShowToast(!showToast);
 
     useEffect(() => {

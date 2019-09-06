@@ -8,14 +8,14 @@ import Header from './components/Header';
 import data from './mock';
 
 const App = () => {
-  const [ tempData, setTempData ] = useState({});
-  const [ item, setItem ] = useState([])
-  const [ loading, setLoading ] = useState(true);
+  const [tempData, setTempData] = useState({});
+  const [item, setItem] = useState([])
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-      setTempData(data);
-      setItem(data.orderDetail.item)
-      setLoading(false);
+    setTempData(data);
+    setItem(data.orderDetail.item)
+    setLoading(false);
   }, []);
 
   const handleCountChange = (count, index) => {
@@ -32,30 +32,30 @@ const App = () => {
   };
 
   const infoProps = {
-      firstName,
-      lastName, 
-      address, 
-      email, 
-      phoneNumber
+    firstName,
+    lastName,
+    address,
+    email,
+    phoneNumber
   };
 
-  const pricingProps ={
+  const pricingProps = {
     item,
   };
 
   return (
     <div className="App">
-      <Header className="bg back"/>
+      <Header />
       {!loading ?
-      ( <Row>
-        <Col sm={12} md={6}>
-          <Cart {...cartProps} />
-        </Col>
-        <Col sm={12} md={6}>
-          <Info {...infoProps} />
-          <Pricing {...pricingProps} />
-        </Col>
-      </Row> ) : (<div/>) }
+        (<Row>
+          <Col sm={12} md={6}>
+            <Cart {...cartProps} />
+          </Col>
+          <Col sm={12} md={6}>
+            <Info {...infoProps} />
+            <Pricing {...pricingProps} />
+          </Col>
+        </Row>) : (<div />)}
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, Form, Button, Col, Row } from 'react-bootstrap';
 
 const Info = ({ firstName, lastName, address, email, phoneNumber }) => {
-    const [ onEdit, setOnEdit ] = useState(false);
+    const [onEdit, setOnEdit] = useState(false);
     const buttonStyle = {
         margin: '20px',
     };

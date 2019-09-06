@@ -47,7 +47,7 @@ const App = () => {
     <div className="App">
       <Header />
       {!loading ?
-        (<Row style={{ margin: '0, 10%'}}>
+        (<Row style={{ margin: '0, 15%'}}>
           <Col sm={12} md={6}>
             <Cart {...cartProps} />
           </Col>

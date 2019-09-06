@@ -7,8 +7,11 @@ const Info = ({ firstName, lastName, address, email, phoneNumber }) => {
         margin: '20px',
     };
     const formConfig = {
-        plaintext : !onEdit,
-        readOnly : !onEdit,
+        plaintext: !onEdit,
+        readOnly: !onEdit,
+    };
+    const formStyle = {
+        marginBottom: '0px !important',
     };
 
     return (

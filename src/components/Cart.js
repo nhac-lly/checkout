@@ -4,7 +4,7 @@ import picB from '../picA.jpg'
 import { Card } from 'react-bootstrap';
 import CounterInput from "react-counter-input";
 
-const Cart = (tempData, loading, handleCountChange) => {
+const Cart = ({tempData, loading, handleCountChange}) => {
   return (
     <div>
       {!loading ?

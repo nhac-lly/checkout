@@ -31,11 +31,11 @@ const App = () => {
       <Header className="bg back"/>
       <Row>
         <Col sm={12} md={6}>
-          {Cart(tempData, loading, handleCountChange)}
+          <Cart tempData={tempData} loading={loading} handleCountChange={handleCountChange} />
         </Col>
         <Col sm={12} md={6}>
-          {Info(tempData, loading)}
-          {Pricing(itemData, loading)}
+          <Info tempData={tempData} loading={loading}/>
+          <Pricing item={itemData} loading={loading}/>
         </Col>
       </Row>
     </div>

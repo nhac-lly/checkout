@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Col, Row } from 'react-bootstrap';
 
-const Info = (tempData, loading) => {
+const Info = ({tempData, loading}) => {
     const [onEdit, setOnEdit] = useState(false);
     const { firstName, lastName, address, email, phoneNumber } = tempData;
     const buttonStyle = {

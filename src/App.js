@@ -26,20 +26,34 @@ const App = () => {
     setItemData(nextItem);
   };
 
+  const cartProps = {
+    tempData,
+    handleCountChange
+  };
+
+  const infoProps = {
+    tempData,
+  };
+
+  const pricingProps ={
+    item: itemData,
+  };
+
   return (
     <div className="App">
       <Header className="bg back"/>
-      <Row>
+      {!loading ?
+      ( <Row>
         <Col sm={12} md={6}>
-          <Cart tempData={tempData} loading={loading} handleCountChange={handleCountChange} />
+          <Cart {...cartProps} />
         </Col>
         <Col sm={12} md={6}>
-          <Info tempData={tempData} loading={loading}/>
-          <Pricing item={itemData} loading={loading}/>
+          <Info {...infoProps} />
+          <Pricing {...pricingProps} />
         </Col>
-      </Row>
+      </Row> ) : (<div/>) }
     </div>
-  );
+  )
 }
 
 export default App;

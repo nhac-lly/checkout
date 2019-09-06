@@ -6,10 +6,14 @@ const Info = ({ firstName, lastName, address, email, phoneNumber }) => {
     const buttonStyle = {
         margin: '20px',
     };
+    const formConfig = {
+        plaintext : !onEdit,
+        readOnly : !onEdit,
+    };
 
     return (
         <div>
-            <Card border="info" style={{ width: '80%', margin: '5% 10%' }}>
+            <Card border="info" style={{ width: '70%', margin: '5% 10%' }}>
                 <Card.Body>
                     <Card.Title>Your Information
                             <div className="Buttons">
@@ -22,7 +26,7 @@ const Info = ({ firstName, lastName, address, email, phoneNumber }) => {
                                 First Name:
                             </Form.Label>
                             <Col sm="6">
-                                <Form.Control plaintext={!onEdit} readOnly={!onEdit} defaultValue={firstName} />
+                                <Form.Control {...formConfig} defaultValue={firstName} />
                             </Col>
                         </Form.Group>
                         <Form.Group as={Row} controlId="formPlaintextEmail">
@@ -30,7 +34,7 @@ const Info = ({ firstName, lastName, address, email, phoneNumber }) => {
                                 Last Name:
                             </Form.Label>
                             <Col sm="6">
-                                <Form.Control plaintext={!onEdit} readOnly={!onEdit} defaultValue={lastName} />
+                                <Form.Control {...formConfig} defaultValue={lastName} />
                             </Col>
                         </Form.Group>
                         <Form.Group as={Row} controlId="formPlaintextEmail">
@@ -38,7 +42,7 @@ const Info = ({ firstName, lastName, address, email, phoneNumber }) => {
                                 Address:
                             </Form.Label>
                             <Col sm="6">
-                                <Form.Control plaintext={!onEdit} readOnly={!onEdit} defaultValue={address} />
+                                <Form.Control {...formConfig} defaultValue={address} />
                             </Col>
                         </Form.Group>
                         <Form.Group as={Row} controlId="formPlaintextEmail">
@@ -46,7 +50,7 @@ const Info = ({ firstName, lastName, address, email, phoneNumber }) => {
                                 Email:
                             </Form.Label>
                             <Col sm="6">
-                                <Form.Control plaintext={!onEdit} readOnly={!onEdit} defaultValue={email} />
+                                <Form.Control {...formConfig} defaultValue={email} />
                             </Col>
                         </Form.Group>
                         <Form.Group as={Row} controlId="formPlaintextEmail">
@@ -54,7 +58,7 @@ const Info = ({ firstName, lastName, address, email, phoneNumber }) => {
                                 Phone Number:
                             </Form.Label>
                             <Col sm="6">
-                                <Form.Control plaintext={!onEdit} readOnly={!onEdit} defaultValue={phoneNumber} />
+                                <Form.Control {...formConfig} defaultValue={phoneNumber} />
                             </Col>
                         </Form.Group>
                     </Form>

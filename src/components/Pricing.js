@@ -37,7 +37,7 @@ const Pricing = ({ item }) => {
 
     return (
         <div>
-            <Card border="info" style={{ width: '80%', margin: '5% auto' }}>
+            <Card border="info" style={{ width: '70%', margin: '5% 10%' }}>
                 <Card.Body>
                     <Card.Title>Summary</Card.Title>
                     <Card.Text>

@@ -7,8 +7,6 @@ import Info from './components/Info';
 import Header from './components/Header';
 import data from './mock';
 
-// const data = JSON.stringify(jsonData)
-
 const App = () => {
   const [ tempData, setTempData ] = useState({});
   const [ item, setItem ] = useState([])
